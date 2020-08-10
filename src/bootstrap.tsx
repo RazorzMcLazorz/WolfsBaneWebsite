@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
+// import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import reducers from './reducers'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { MuiTheme } from './theme/MuiTheme'
@@ -17,7 +16,7 @@ import './style/main.scss'
 
 function main() {
   ReactDOM.render(
-    <Provider store={createStoreWithMiddleware(reducers)}>
+    // <Provider store={createStoreWithMiddleware(reducers)}>
       <ThemeProvider theme={MuiTheme}>
         <CssBaseline />
         <BrowserRouter>
@@ -36,7 +35,7 @@ function main() {
           
         </BrowserRouter>
       </ThemeProvider>
-    </Provider>
+    // </Provider>
     , document.querySelector('.app-wrapper'))
 }
 
